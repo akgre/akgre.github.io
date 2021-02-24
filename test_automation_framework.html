@@ -50,7 +50,7 @@
         <p>Generic open source automation framework for functional, parametric, acceptance and performance testing.</p>
         <p>The objective is to provide a system to manage test sequences for simplifying test workflow, product analysis and troubleshooting.</p>
         <h2 id="purpose">Purpose</h2>
-        <p>Often when I come across applications that are for testing they are built from the ground up. It start with the goal of automating a small task and it grows to the point where it take up nearly all your time to modify, maintain and usually has different variants for multiple task. The applications are still very useful, however, without the use of a common structure any changes need to be repeated and keeping track of this can be a source of frustration.</p>
+        <p>Often when I come across applications that are for testing they are built from the ground up. It starts with the goal of automating a small task and it grows to the point where it take up nearly all your time to modify, maintain and usually has different variants for multiple task. The applications are still very useful, however, without the use of a common structure any changes need to be repeated and keeping track of this can be a source of frustration.</p>
         <p>The solution to organising the test applications would be a test management platform. TestStand is a powerful application for creating sequences and has many features, and the Robot Framework is open source and base on python, however, the former has a high cost and the later is more designed for web testing.</p>
         <p>This is where the test automation framework comes into play. I wanted to create a test management platform that is simple to use and easy to develop with.</p>
         <h2 id="flow-overview">Flow Overview</h2>
@@ -72,8 +72,48 @@
         <ul>
         <li><strong>Safe State Shutdown:</strong> To prevent any data loss and to make sure the device under test can be removed.</li>
         <li><strong>Session Analysis:</strong> Will display a report of the session</li>
-        <li><strong>Release Data:</strong> The user can choose to Release the data for review by other members of the team.</li>
+        <li><strong>Release Data:</strong> The user can choose to release the data for review by other members of the team.</li>
 </ul>
+        <h1 id="test-automation-framework">Test Automation Framework</h1>
+<p>Generic open source automation framework for functional, parametric, acceptance and performance testing.</p>
+<p>The objective is to provide a system to manage test sequences for simplifying test workflow, product analysis and troubleshooting.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Often when I come across applications that are for testing they are built from the ground up. It starts with the goal of automating a small task and it grows to the point where it take up nearly all your time to modify, maintain and usually has different variants for multiple task. The applications are still very useful, however, without the use of a common structure any changes need to be repeated and keeping track of this can be a source of frustration.</p>
+<p>The solution to organising the test applications would be a test management platform. TestStand is a powerful application for creating sequences and has many features, and the Robot Framework is open source and base on python, however, the former has a high cost and the later is more designed for web testing.</p>
+<p>This is where the test automation framework comes into play. I wanted to create a test management platform that is simple to use and easy to develop with.</p>
+<h2 id="flow-overview">Flow Overview</h2>
+<p><img src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/high_level_flowchart.PNG?raw=true" alt="high_level_flowchart" /></p>
+<h3 id="initiating-the-session">Initiating The Session</h3>
+<ul>
+<li><strong>Build Session:</strong> A GUI is available for a user to select a set of tasks to perform. The session will load the selected configuration, build the session archive and load the performing module that will perform a specific task.</li>
+<li><strong>Verify Session Data:</strong> A session could have a single set of parameters or a matrix of hundreds of permutations (there is no limit) so it is important to check the input data is valid. the data is sent to a validation function in the performing module and will notify the user of invalid entries.</li>
+<li><strong>Verify Interfaces:</strong> Checks that all the hardware needed for performing the task is available and will notify the user of unavailable hardware.</li>
+</ul>
+<h3 id="main-performing-loop">Main Performing Loop</h3>
+<p>The performing function will require a set of parameters for performing the task and these parameters will be set in a definition record. The creator of the definitions can also group definitions by certain criteria which can be placed into a definition batch file.</p>
+<ul>
+<li><strong>Definition Batch:</strong> List of definition batches to be performed.</li>
+<li><strong>Definition Record:</strong> List of the records in the current batch.</li>
+<li><strong>Perform Function:</strong> Specific module that will be performing the task and return the results.</li>
+</ul>
+<h3 id="session-wrap-up">Session Wrap Up</h3>
+<ul>
+<li><strong>Safe State Shutdown:</strong> To prevent any data loss and to make sure the device under test can be removed.</li>
+<li><strong>Session Analysis:</strong> Will display a report of the session</li>
+<li><strong>Release Data:</strong> The user can choose to Release the data for review by other members of the team.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="session-queue">Session Queue</h3>
+<p>When the user starts the application they are presented with a queue window.</p>
+<p><img src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/test_queue_viewer.PNG?raw=true" alt="test_queue_viewer" /></p>
+<p>This application is able to queue multiple test sessions and shows the user the test details of their selected tests they wish to run.</p>
+<p><img src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/test_queue.PNG?raw=true" alt="test_queue_viewer" /></p>
+<p>Having a queue rather than a single selection allows the user to run the same test multiple times or build a series of smaller test sessions. The choice will be down to preference of how long the tests might take or how the users would like the tests reported.</p>
+<p>The <strong>setup files</strong> have been created by the test developer, the user selects a file and the details will be displayed. The user can modify the details and save it as a new setup file.</p>
+<h3 id="session-monitor">Session Monitor</h3>
+<p>I see being able to very quickly understand where the session is as vitally important when it comes to more complex test systems. When failures are found being able to quickly discover where the issue is occurring can save huge amounts of time in solving the issue.</p>
+<p>When the session is running the user will be able to view the progress and control the session with the monitor.</p>
+<p><img src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/test_flow_monitor.PNG?raw=true" alt="test_flow_monitor" /></p>
 
     </div>
   </div>
