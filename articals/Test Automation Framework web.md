@@ -10,11 +10,7 @@ To provide a system to meet your current and future requirements to manage test 
 
 Typically test applications develop from basic essential functions, growing over time to cover variants and multiple tasks along with further aspects for certification and reliability criteria. The applications are very useful, however, without the use of a common structure the system will take up nearly all your time, and can be a source of frustration to continuous modify, maintain and document.
 
-The ideal solution to organising the test applications is a test management platform. 
-
-
-
-TestStand is a powerful application for creating sequences and has many features, and the Robot Framework is open source and base on python, however, the former has a high cost and the later is more designed for web testing.
+The ideal solution to organising the test applications is a test management platform. Current applications are either costly and require a licence for each system and comparable open source software are tailored for web or program testing.
 
 This is where the test automation framework comes into play. I can offer a test management platform that is simple to use and easy to develop with.
 
@@ -53,11 +49,11 @@ This application is able to queue multiple sessions and shows the user the detai
 
 Having a queue rather than a single selection allows the user to run the same test multiple times or build a series of smaller test sessions. The choice will be down to preference of how long the tests might take or how the users would like the tests reported.
 
-The **setup files** have been created by the test developer, the user selects a file and the details will be displayed. The user can modify the details and save it as a new setup file.
+The **setup files** have been created by the test developer; the user selects a file and the details will be displayed. The user can modify the details and save it as a new setup file.
 
 ### Session Monitor
 
-I see being able to very quickly understand where the session is as vitally important when it comes to more complex test systems. When failures are found being able to quickly discover where the issue is occurring can save huge amounts of time in solving the issue. 
+Being able to very quickly understand where the session is as vitally important when it comes to more complex test systems. When failures are found being able to quickly discover where the issue is occurring can save huge amounts of time in solving the issue. 
 
 When the session is running the user will be able to view the progress and control the session with the monitor.
 
