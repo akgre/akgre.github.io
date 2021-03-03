@@ -33,6 +33,15 @@
       page-break-inside: avoid;
     }
 
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body class="min-h-screen bg-gray-100 print:min-h-0">
@@ -51,17 +60,26 @@
       --->
 </nav>
 <div id="main">
-
-
     <div class="w-1/8 page flex flex-wrap justify-center mt-10">
-        <div class="flex w-full justify-center mb-3 pb-10">
+        <div class="flex w-full justify-center sm:hidden">
             <iframe
                     src="https://akgre.github.io//AGREENYER_profile.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=125"
                     frameBorder="0"
                     scrolling="auto"
-                    height="2700%"
+                    height="100%"
                     width="100%"
             ></iframe>
+        </div>
+        <div class="flex w-full justify-center mb-3 pb-10">
+            <div class="invisible sm:visible flex w-full justify-center mb-3 pb-10">
+                <iframe
+                        src="https://akgre.github.io//AGREENYER_profile.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=125"
+                        frameBorder="0"
+                        scrolling="auto"
+                        height="2700%"
+                        width="100%"
+                ></iframe>
+            </div>
             <!---
             <embed
         src="https://akgre.github.io//AGREENYER_profile.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -74,8 +92,6 @@
     --->
         </div>
     </div>
-
-
 </div>
 </body>
 </html>
