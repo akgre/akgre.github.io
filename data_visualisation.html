@@ -53,6 +53,10 @@
 
 
 
+
+
+
+
     </style>
 </head>
 <body class="min-h-screen bg-gray-100 print:min-h-0">
@@ -109,15 +113,24 @@
                 <h2 id="viewing-multi-dimensional-data">Viewing Multi-Dimensional Data</h2>
                 <p>When we're trying to view trends of multiple variables or large data sets it can be difficult to
                     visualise on two dimensional plots.</p>
-                <p>Pair-wise plots allows us to see both distribution of single variables and relationships between two
+                <p>Multi-panel plots allows us to see both distribution of single variables and relationships between
+                    two
                     variables.</p>
-                <h3>Pair-wise Plot Of Bluetooth Results Sample.</h3>
-                <p>
-                    <img src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/high_level_bt.png?raw=true"
-                         alt="high_level_bt"/></p>
+                <h3>Multi-panel Plot Of Bluetooth Sample Results.</h3>
+                <div class="border-l-2 border-indigo-500 leading-tight text-sm">
+                    <p class="p-5">
+                        <img
+                                src="https://github.com/akgre/akgre.github.io/blob/master/articals/img/high_level_bt.png?raw=true"
+                                alt="high_level_bt"/>
+                        The above plot shows the distribution for each "result value" -- dBm, kHz, and
+                        ratio -- across a range of three different temperatures. The plot is further divided into
+                        three columns, which is the "data packet type" (don't worry too much about the technical jargon.)
+                    </p>
+                </div>
                 <p>Based on the above plot, you can see that plot collections are a useful way of observing potential
                     relationships or patterns in two-dimensions for data attributes. Here we can see that temperature
-                    affects the results in one set of tests but data packet type does not. We would then drill down into
+                    affects the results in the first set of tests but data packet type does not. We would then drill
+                    down into
                     the data to see how each unit is affected and this would give us insights to compensate for
                     temperature in the design.
                 </p>
